@@ -1,3 +1,7 @@
+# Supported tags and respective `Dockerfile` links
+
+`2.1`, `latest` [(Dockerfile)](https://github.com/machine-data/docker-oauth2_proxy/blob/v2.1/Dockerfile)
+
 # oauth2_proxy on Docker
 
 This repository holds a build definition and supporting files for building a Docker image to run [oauth2_proxy](https://github.com/bitly/oauth2_proxy).
