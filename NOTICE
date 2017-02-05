@@ -1,0 +1,14 @@
+docker-oauth2_proxy
+Copyright 2017 Crate.io, Inc. ("Crate")
+
+This product includes software developed at:
+
+
+=========================================================================
+
+oauth2_proxy
+https://github.com/bitly/oauth2_proxy
+developed by Bitly
+License: MIT (https://opensource.org/licenses/MIT)
+
+=========================================================================

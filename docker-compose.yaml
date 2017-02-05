@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  oauth2_proxy:
+    image: machine-data/oauth2_proxy
+    ports:
+      - "4180:4180"
+    #volumes:
+        #  - ./oauth2_proxy.cfg:/config/oauth2_proxy.cfg:ro
+        #  - ./templates:/templates
+    environment:
+      OAUTH2_PROXY_UPSTREAM: "http://...:.../"
+      OAUTH2_PROXY_CLIENT_ID: "...apps.googleusercontent.com"
+      OAUTH2_PROXY_CLIENT_SECRET: "..."
+      #OAUTH2_PROXY_COOKIE_SECRET:
+      #OAUTH2_PROXY_EMAIL_DOMAIN:
