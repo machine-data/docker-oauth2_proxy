@@ -89,7 +89,7 @@ You can pass any variable that is specified on the [command line options](https:
 ## Configuration file
 
 The container is configured to start oauth2_proxy with `/config/oauth2_proxy.cfg` as config file.
-If a config file is mounted (preferably read-only), the `OAUTH2_PROXY_` environment variables will be ignored:
+If a config file is mounted (preferably read-only), the `OAUTH2_PROXY_` environment variables will be ignored. Use the [example config](https://github.com/bitly/oauth2_proxy/blob/master/contrib/oauth2_proxy.cfg.example) to start:
 
 ```sh
 $ curl -O https://raw.githubusercontent.com/bitly/oauth2_proxy/master/contrib/oauth2_proxy.cfg.example
