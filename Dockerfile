@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.4
 
 # add user and group first so their IDs don't change
 RUN addgroup oauth2_proxy && adduser -G oauth2_proxy  -D -H oauth2_proxy
@@ -12,6 +12,7 @@ ENV OAUTH2_PROXY_VERSION="2.1"
 RUN set -xe \
     && apk add --no-cache --virtual .run-deps \
         bash \
+        ca-certificates \
     && apk add --no-cache --virtual .build-deps \
         curl \
         tar \
