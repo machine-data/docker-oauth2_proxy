@@ -38,7 +38,7 @@ VOLUME [ "/templates" ]
 
 EXPOSE 4180
 
-HEALTHCHECK CMD curl -f http://localhost:4180/ping || exit 1
+HEALTHCHECK CMD curl --fail -s http://localhost:4180/ping || exit 1
 
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
