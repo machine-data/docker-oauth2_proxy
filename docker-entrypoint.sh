@@ -8,7 +8,6 @@ fi
 
 # allow the container to be started with `--user`
 if [ "$1" = 'oauth2_proxy' -a "$(id -u)" = '0' ]; then
-    chown -R oauth2_proxy:oauth2_proxy /conf /templates
     exec su-exec oauth2_proxy "$0" "$@"
 fi
 

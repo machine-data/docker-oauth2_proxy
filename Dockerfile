@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.5
 
 # add user and group first so their IDs don't change
 RUN addgroup oauth2_proxy && adduser -G oauth2_proxy  -D -H oauth2_proxy
@@ -13,8 +13,8 @@ RUN set -xe \
     && apk add --no-cache --virtual .run-deps \
         bash \
         ca-certificates \
-    && apk add --no-cache --virtual .build-deps \
         curl \
+    && apk add --no-cache --virtual .build-deps \
         tar \
     \
     && curl -O -fSL "https://github.com/bitly/oauth2_proxy/releases/download/v${OAUTH2_PROXY_VERSION}/oauth2_proxy-${OAUTH2_PROXY_VERSION}.linux-amd64.go1.6.tar.gz" \
@@ -38,7 +38,10 @@ VOLUME [ "/templates" ]
 
 EXPOSE 4180
 
+HEALTHCHECK CMD curl -f http://localhost/ping || exit 1
+
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ["oauth2_proxy", "--config", "/conf/oauth2_proxy.cfg"]
+
