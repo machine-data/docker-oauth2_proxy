@@ -41,7 +41,7 @@ It is very easy to configure oauth2_proxy via environment variables. If no confi
 
 - `OAUTH2_PROXY_CLIENT_SECRET`: the OAuth Client Secret
 
-- `OAUTH2_PROXY_COOKIE_SECRET`: the seed string for secure cookies. To generate a strong cookie secret just run `python -c 'import os,base64; print base64.b64encode(os.urandom(16))'`.
+- `OAUTH2_PROXY_COOKIE_SECRET`: the seed string for secure cookies. To generate a strong cookie secret just run `python -c 'import os,base64; print base64.b64encode(os.urandom(18))'`.
 
 - `OAUTH2_PROXY_EMAIL_DOMAIN`: authenticate emails with the specified domain (may be given multiple times). The default is "*" and will authenticate any email.
 
