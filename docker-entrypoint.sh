@@ -50,6 +50,7 @@ if [ "$1" = 'oauth2_proxy' ]; then
             pass-access-token
             pass-basic-auth
             pass-host-header
+            pass-user-headers
             profile-url
             provider
             proxy-prefix
@@ -60,7 +61,9 @@ if [ "$1" = 'oauth2_proxy' ]; then
             scope
             signature-key
             skip-auth-regex
+            skip-auth-preflight
             skip-provider-button
+            ssl-insecure-skip-verify
             tls-cert
             tls-key
             upstream

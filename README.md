@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
-- `2`, `2.2`, `2.1`, `latest` [(Dockerfile)](https://github.com/machine-data/docker-oauth2_proxy/blob/master/Dockerfile)
+- `2`, `2.1`, `2.2`, `latest` [(Dockerfile)](https://github.com/machine-data/docker-oauth2_proxy/blob/master/Dockerfile)
 
 # oauth2_proxy on Docker
 
