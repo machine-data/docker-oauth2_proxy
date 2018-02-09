@@ -1,6 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
-- `2`, `2.1`, `latest` [(Dockerfile)](https://github.com/machine-data/docker-oauth2_proxy/blob/master/Dockerfile)
+- `2`, `2.2`, `2.1`, `latest` [(Dockerfile)](https://github.com/machine-data/docker-oauth2_proxy/blob/master/Dockerfile)
 
 # oauth2_proxy on Docker
 
@@ -118,7 +118,7 @@ oauth2_proxy is a creation of [bitly](http://word.bitly.com/post/47548678256/goo
 It is licensed under the [MIT license](https://github.com/bitly/oauth2_proxy/blob/master/LICENSE).
 
 docker-oauth2_proxy is licensed under the [Apache 2.0 license](https://github.com/machine-data/docker-oauth2_proxy/blob/master/LICENSE), was created by [Jodok Batlogg](https://github.com/jodok).
-Copyright 2016 [Crate.io, Inc.](https://crate.io).
+Copyright 2016-2018 [Crate.io, Inc.](https://crate.io).
 
 ## Contributing
 
