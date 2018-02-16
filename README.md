@@ -1,11 +1,11 @@
 # Supported tags and respective `Dockerfile` links
 
-- `2`, `2.2`, `2.1`, `latest` [(Dockerfile)](https://github.com/machine-data/docker-oauth2_proxy/blob/master/Dockerfile)
+- `2`, `2.1`, `2.2`, `latest` [(Dockerfile)](https://github.com/machine-data/docker-oauth2_proxy/blob/master/Dockerfile)
 
 # oauth2_proxy on Docker
 
 This repository holds a build definition and supporting files for building a Docker image to run [oauth2_proxy](https://github.com/bitly/oauth2_proxy).
-It is published as automated build `machine-data/oauth2_proxy` on [Docker Hub](https://registry.hub.docker.com/u/machinedata/oauth2_proxy/).
+It is published as automated build `machinedata/oauth2_proxy` on [Docker Hub](https://registry.hub.docker.com/u/machinedata/oauth2_proxy/).
 
 ## What is oauth2_proxy?
 
@@ -30,7 +30,7 @@ $ docker run -d -p 4180:4180 \
     -e OAUTH2_PROXY_CLIENT_ID=... \
     -e OAUTH2_PROXY_CLIENT_SECRET=... \
     -e OAUTH2_PROXY_UPSTREAM=... \
-    machine-data/oauth2_proxy
+    machinedata/oauth2_proxy
 ```
 
 ## Environment variables
@@ -101,7 +101,7 @@ $ mv oauth2_proxy.cfg.example oauth2_proxy.cfg
 $ sed -i -e "s/# http_address = .*/http_address = \"0.0.0.0:4180\"/" oauth2_proxy.cfg.example
 $ docker run -d \
              -v $(pwd)/oauth2_proxy.cfg.example:/config/oauth2_proxy.cfg:ro \
-             -p 4180:4180 machine-data/oauth2_proxy
+             -p 4180:4180 machinedata/oauth2_proxy
 ```
 
 ## Volumes
