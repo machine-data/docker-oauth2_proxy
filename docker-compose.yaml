@@ -2,7 +2,7 @@ version: '2'
 
 services:
   oauth2_proxy:
-    image: machine-data/oauth2_proxy
+    image: machinedata/oauth2_proxy
     ports:
       - "4180:4180"
     #volumes:
