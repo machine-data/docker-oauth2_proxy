@@ -25,6 +25,7 @@ if [ "$1" = 'oauth2_proxy' ]; then
             authenticated-emails-file
             azure-tenant
             basic-auth-password
+            bitbucket-team
             client-id
             client-secret
             config
@@ -91,7 +92,13 @@ if [ "$1" = 'oauth2_proxy' ]; then
                 else
                     # unfortunately ${!var} is only available in bash and not sh
                     # that's why the alpine container installs bash as runtime dependency
-                    echo "${var} = \"${!env_var}\"" >> /conf/oauth2_proxy.cfg
+                    #
+                    # one variable uses a dash rather than underscore...
+                    if [ "$var" == "proxy_prefix" ]; then
+                      echo "proxy-prefix = \"${!env_var}\"" >> /conf/oauth2_proxy.cfg
+                    else
+                      echo "${var} = \"${!env_var}\"" >> /conf/oauth2_proxy.cfg
+                    fi
                 fi
             fi
         done
