@@ -93,6 +93,7 @@ if [ "$1" = 'oauth2_proxy' ]; then
                     # that's why the alpine container installs bash as runtime dependency
                     #
                     # one variable uses a dash rather than underscore...
+                    # https://github.com/bitly/oauth2_proxy/issues/609
                     if [ "$var" == "proxy_prefix" ]; then
                       echo "proxy-prefix = \"${!env_var}\"" >> /conf/oauth2_proxy.cfg
                     else
