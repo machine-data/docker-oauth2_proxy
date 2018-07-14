@@ -6,7 +6,7 @@ services:
     ports:
       - "4180:4180"
     #volumes:
-        #  - ./oauth2_proxy.cfg:/config/oauth2_proxy.cfg:ro
+        #  - ./oauth2_proxy.cfg:/conf/oauth2_proxy.cfg:ro
         #  - ./templates:/templates
     environment:
       OAUTH2_PROXY_UPSTREAM: "http://...:.../"
