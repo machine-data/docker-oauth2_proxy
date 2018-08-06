@@ -38,6 +38,7 @@ if [ "$1" = 'oauth2_proxy' ]; then
             custom-templates-dir
             display-htpasswd-form
             email-domain
+            footer
             github-org
             github-team
             google-admin-email
