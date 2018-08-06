@@ -94,8 +94,13 @@ if [ "$1" = 'oauth2_proxy' ]; then
                     #
                     # one variable uses a dash rather than underscore...
                     # https://github.com/bitly/oauth2_proxy/issues/609
+                    # two variables have a different name in cfg compared to cli
                     if [ "$var" == "proxy_prefix" ]; then
                       echo "proxy-prefix = \"${!env_var}\"" >> /conf/oauth2_proxy.cfg
+                    elif [ "$var" == "tls_cert" ]; then
+                      echo "tls_cert_file = \"${!env_var}\"" >> /conf/oauth2_proxy.cfg
+                    elif [ "$var" == "tls_key" ]; then
+                      echo "tls_key_file = \"${!env_var}\"" >> /conf/oauth2_proxy.cfg
                     else
                       echo "${var} = \"${!env_var}\"" >> /conf/oauth2_proxy.cfg
                     fi
